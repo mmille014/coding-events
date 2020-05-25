@@ -40,7 +40,7 @@ public class EventCategoryController {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Create_Category");
-
+            model.addAttribute(new EventCategory());
             return "eventCategories/create";
         }
         eventCategoryRepository.save(eventCategory);
