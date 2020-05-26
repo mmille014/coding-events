@@ -11,11 +11,11 @@
                 <th>Category Name</th>
             </tr>
         </thead>
-        <tbody>
-            <tr th:each="category : ${categories}">
-                <td th:text="${category.name}"></td>
-            </tr>
-        </tbody>
+        <tr th:each="category : ${categories}">
+            <td>
+                <a th:href="'/events?categoryId=' + ${category.id}" th:text="${category.name}"></a>
+            </td>
+        </tr>
     </table>
 
 </body>
